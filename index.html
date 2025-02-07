@@ -7,10 +7,26 @@
         <link href="css/index.css" rel="stylesheet">
     </head>
     <body>
-        <section id="cat-project">
-            <h2>Cat Project</h2>
-            <ul></ul>
-        </section>
+        <h1>It's all about cats!</h1>
+
+        <p>Use the search bar to get a random cat through a specific behavior!</p>
+
+        <form id="searchFormId" name="search_a_behavior" autocomplete="on">
+            <input
+                type="text"
+                name="searchBehavior"
+                id="searchBehaviorId"
+                placeholder="Search by behavior.."
+                required="true">
+            <button type="submit">Search</button>
+        </form>
+
+        <h3 id="breed-name"></h3>
+
+        <img src="" alt="" id="cat-image">
+
+        <p>Behavior:</p> <div id="breed-json"></div>
+
         <script src="js/index.js"></script>
     </body>
 </html>
