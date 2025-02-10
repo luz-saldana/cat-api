@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(170, 243, 239);
+    font-family: "Oswald", serif;
+}
+
+h1 {
+    background-color: rgba(73, 241, 247, 0.445);
+    border: solid 1px rgb(0, 0, 0);
+    font-family: "Kumar One", serif;
+    text-align: center;
+    font-size: 3rem;
+    margin: 1em;
+}
+
+#intro-p {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
+    gap: 1em;
+}
+
+input {
+    display: flex;
+    width: 100%;
+    max-width: 40vw;
+    height: 2em;
+    border: solid 1px black;
+    border-radius: 1em;
+}
+
+#search-button {
+    width: 10em;
+    height: 2em;
+    border-radius: 1em;
+    background-color: rgb(37, 196, 249);
+}
+
+#search-button:hover {
+    background-color: rgb(115, 216, 249);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+}
+#breed-name {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#cat-image {
+    display: block;
+    flex-wrap: wrap;
+    justify-self: center;
+    width: 40vw;
+    max-height: max-content;
+}
+
+#behavior {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+}
+#header-behavior {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-left: 5em;
+    margin-bottom: 0;
+}
+#breed-temp {
+    font-family: "42dot Sans", serif;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    font-weight: 300;
+}
