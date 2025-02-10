@@ -10,9 +10,17 @@
         <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Atma:wght@300;400;500;600;700&family=Delius&family=Kumar+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
+        <nav id="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="favorite.html">Favorites</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
         <h1>It's all about cats!</h1>
 
-        <h3 id="intro-p">Type in a behavior to get a random cat!<br>Example: social, curious, intelligent, friendly, etc.</h3>
+        <h3 id="intro-p">Type in a behavior to get a random cat! If you like the cat, click the love button!<br>Example: social, curious, intelligent, friendly, etc.</h3>
 
         <form id="searchFormId" name="search_a_behavior" autocomplete="on">
             <input
@@ -23,15 +31,19 @@
                 required="true">
             <button id="search-button" type="submit">Search</button>
         </form>
+        </section>
+
+        <div id="cat-profile">
         <section id="cat-section">
             <h3 id="breed-name"></h3>
             <img src="" alt="" id="cat-image">
+            <button id="favorite-button">Love!</button>
         </section>
-
-        <section id="behavior">
+        <section id="behavior-section">
             <h4 id="header-behavior">This cat is known for being:</h4> 
             <p id="breed-temp"></p>
         </section>
+        </div>
 
         <script src="js/index.js"></script>
     </body>

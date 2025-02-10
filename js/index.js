@@ -1,4 +1,5 @@
 const url = `https://api.thecatapi.com/v1/breeds`;
+const url2 = `https://api.thecatapi.com/v1/favourites`;
 const api_key = 'live_wTn0o0wfYIBtbExUxfirZReRvfARViX7WSF1F6369C4g2Fuf5zdCazixwfjZvrhO';
 
 // a variable / empty array to store the breeds//
@@ -10,8 +11,13 @@ let matchingBehavior = [];
 // variable that will contain the search form from the html file//
 const searchForm = document.getElementById("searchFormId");
 
+// hiding the header Behavior//
 const hiddenBehavior = document.getElementById("header-behavior");
 hiddenBehavior.hidden = true;
+
+//hiding the button for favoriting//
+const hiddenFavorite = document.getElementById("favorite-button");
+hiddenFavorite.hidden = true;
 
 
 
@@ -46,6 +52,7 @@ searchForm.addEventListener("submit", (event) => {
     catImgAndInfo(matchedBreed);
 
     hiddenBehavior.hidden = false;
+    hiddenFavorite.hidden = false;
 
     searchForm.reset();
 
@@ -66,7 +73,7 @@ function catImgAndInfo(breedObject) {
     document.getElementById("breed-temp").textContent = breedObject.temperament;
 }
 
-//fetch data//
+//fetch data for breed/temperament searching- 1st endpoint//
 fetch(url, {
     headers: {
         "x-api-key": api_key,
@@ -80,3 +87,6 @@ fetch(url, {
     storedBreeds = data;
     console.log(storedBreeds);
 }).catch((error) => {console.error("An error ocurred",error)});
+
+//fetch data for favoriting - 2nd endpoint//
+
