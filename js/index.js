@@ -1,5 +1,4 @@
 const url = `https://api.thecatapi.com/v1/breeds`;
-const url2 = `https://api.thecatapi.com/v1/favourites`;
 const api_key = 'live_wTn0o0wfYIBtbExUxfirZReRvfARViX7WSF1F6369C4g2Fuf5zdCazixwfjZvrhO';
 
 // a variable / empty array to store the breeds//
@@ -14,10 +13,6 @@ const searchForm = document.getElementById("searchFormId");
 // hiding the header Behavior//
 const hiddenBehavior = document.getElementById("header-behavior");
 hiddenBehavior.hidden = true;
-
-//hiding the button for favoriting//
-const hiddenFavorite = document.getElementById("favorite-button");
-hiddenFavorite.hidden = true;
 
 
 
@@ -48,21 +43,19 @@ searchForm.addEventListener("submit", (event) => {
     //randomInt contains a random integer between 0 and the last element of the array by using the getRandomInteger functions to get a random breed that contains the matchingBehavior//
     const randomInt = getRandomInteger(0, matchingBehavior.length -1);
     const matchedBreed = matchingBehavior[randomInt];
+
     // get the information and image of the cat that matches the search//
     catImgAndInfo(matchedBreed);
 
     hiddenBehavior.hidden = false;
-    hiddenFavorite.hidden = false;
 
     searchForm.reset();
 
 })
-
 // //function to get a random breed//
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 // //function to show images and information of the breeds//
 function catImgAndInfo(breedObject) {
     // display image of cat//
@@ -72,7 +65,6 @@ function catImgAndInfo(breedObject) {
     //characteristics//
     document.getElementById("breed-temp").textContent = breedObject.temperament;
 }
-
 //fetch data for breed/temperament searching- 1st endpoint//
 fetch(url, {
     headers: {
@@ -88,5 +80,8 @@ fetch(url, {
     console.log(storedBreeds);
 }).catch((error) => {console.error("An error ocurred",error)});
 
-//fetch data for favoriting - 2nd endpoint//
+
+//fetch data for  - 2nd endpoint//
+
+
 
