@@ -25,6 +25,4 @@ fetch(url,{headers: {
         document.getElementById('collage-section').appendChild(image);
 
         });
-    }).catch(function(error) {
-        console.log(error);
-    });
+    }).catch((error) => {console.error("An error ocurred",error)});
