@@ -28,6 +28,12 @@ body {
     color: rgb(215, 10, 71);
 }
 
+@media(max-width: 375px) {
+    #navigation {
+        padding: 0.5em;
+    }
+}
+
 h1 {
     background-color: rgba(73, 241, 247, 0.445);
     border: solid 1px rgb(0, 0, 0);
@@ -64,6 +70,11 @@ input {
     border-radius: 1em;
 }
 
+@media(max-width: 375px) {
+    input {
+        width: 40vw;
+    }
+}
 #search-button {
     width: 10em;
     height: 2em;
@@ -75,10 +86,16 @@ input {
     background-color: rgb(115, 216, 249);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
 }
+
 #breed-name {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 0;
+}
+@media(max-width: 375px) {
+    #breed-name {
+        font-size: 2rem;
+    }
 }
 
 #cat-profile {
@@ -88,7 +105,12 @@ input {
     margin-top: 2em;
     justify-content: center;
 }
-
+@media(max-width: 375px) {
+    #cat-profile {
+        flex-direction: column;
+        gap: 0;
+    }
+}
 #cat-section {
     display: flex;
     flex-direction: column;
@@ -96,26 +118,22 @@ input {
     gap: 1em;
     margin-bottom: 7em;
 }
+@media(max-width: 375px) {
+    #cat-section {
+        margin-bottom: 1em;
+    }
+}
 
 #cat-image {
     display: flex;
     justify-content: center;
     width: 30vw;
     max-height: max-content;
-    /* border: solid 3px rgb(237, 249, 249);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); */
 }
-
-#favorite-button {
-    width: 6em;
-    height: 2.5em;
-    border-radius: 1em;
-    background-color: rgb(250, 147, 216);
-}
-
-#favorite-button:hover {
-    background-color: rgb(249, 220, 246);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7);
+@media(max-width: 375px) {
+    #cat-image {
+        width: 70vw;
+    }
 }
 
 #behavior-section {
@@ -125,18 +143,34 @@ input {
     flex-direction: column;
     justify-content: center;
 }
+@media(max-width: 375px) {
+    #behavior-section{margin-top: 0;}
+}
 
 #header-behavior {
     font-weight: 400;
     font-size: 1.5rem;
     margin-bottom: 0.25em;
 }
+@media(max-width: 375px) {
+    #header-behavior {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
 #breed-temp {
     font-family: "42dot Sans", serif;
     text-align: center;
     font-size: 1.5rem;
     margin-top: 0;
     font-weight: 300;
+}
+@media(max-width: 375px) {
+    #breed-temp {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
 /* collage styling*/
@@ -153,7 +187,20 @@ input {
     width: 70vw;
     
 }
-
+@media(max-width: 375px) {
+    #collage-section {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(100, 1fr));
+       gap: 1em;
+    }
+}
+@media(max-width: 375px) {
+    #collage-section img {
+        max-width: 5em;
+        height: auto;
+        border-radius: 2px;
+    }
+}
 #col-header-2 {
     margin-top: 2em;
     text-align: center;
