@@ -10,6 +10,7 @@ let matchingBehavior = [];
 // variable that will contain the search form from the html file//
 const searchForm = document.getElementById("searchFormId");
 
+// hiding the header Behavior//
 const hiddenBehavior = document.getElementById("header-behavior");
 hiddenBehavior.hidden = true;
 
@@ -42,6 +43,7 @@ searchForm.addEventListener("submit", (event) => {
     //randomInt contains a random integer between 0 and the last element of the array by using the getRandomInteger functions to get a random breed that contains the matchingBehavior//
     const randomInt = getRandomInteger(0, matchingBehavior.length -1);
     const matchedBreed = matchingBehavior[randomInt];
+
     // get the information and image of the cat that matches the search//
     catImgAndInfo(matchedBreed);
 
@@ -50,12 +52,10 @@ searchForm.addEventListener("submit", (event) => {
     searchForm.reset();
 
 })
-
 // //function to get a random breed//
 function getRandomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 // //function to show images and information of the breeds//
 function catImgAndInfo(breedObject) {
     // display image of cat//
@@ -65,8 +65,7 @@ function catImgAndInfo(breedObject) {
     //characteristics//
     document.getElementById("breed-temp").textContent = breedObject.temperament;
 }
-
-//fetch data//
+//fetch data for breed/temperament searching- 1st endpoint//
 fetch(url, {
     headers: {
         "x-api-key": api_key,
@@ -80,3 +79,9 @@ fetch(url, {
     storedBreeds = data;
     console.log(storedBreeds);
 }).catch((error) => {console.error("An error ocurred",error)});
+
+
+//fetch data for  - 2nd endpoint//
+
+
+
