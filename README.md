@@ -1,6 +1,6 @@
 # cat-api
 Open API project for Code the Dream 
-[My Open API Project] (https://github.com/luz-saldana/cat-api)
+[My Open API Project](https://github.com/luz-saldana/cat-api)
 
 Welcome to my "it's all about cats" project! 
 
